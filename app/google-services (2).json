@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "357758522994",
+    "firebase_url": "https://bridge-2f321.firebaseio.com",
+    "project_id": "bridge-2f321",
+    "storage_bucket": "bridge-2f321.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357758522994:android:adb2a362316ee1ad6154eb",
+        "android_client_info": {
+          "package_name": "com.example.bridge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "357758522994-ed4m078i9fhf7grk13455bmgdgjtfpfo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2SEsVwA93QUdv-btDSAIbi5AezpMqdTM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "357758522994-ed4m078i9fhf7grk13455bmgdgjtfpfo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
