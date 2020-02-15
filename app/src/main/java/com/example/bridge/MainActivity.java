@@ -12,6 +12,7 @@ import com.scaledrone.lib.RoomListener;
 import com.scaledrone.lib.Scaledrone;
 
 public class MainActivity extends AppCompatActivity implements RoomListener {
+
         private String channelID = "Kg1OF0QfYGklQFqQ";
         private String roomName = "Bridge";
         private EditText editText;
