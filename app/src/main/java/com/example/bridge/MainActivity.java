@@ -1,22 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.example.bridgeapp">
-<uses-permission android:name="android.permission.INTERNET" />
+package com.example.bridgeapp;
 
-<application
-        android:allowBackup="true"
-                android:icon="@mipmap/ic_launcher"
-                android:label="@string/app_name"
-                android:roundIcon="@mipmap/ic_launcher_round"
-                android:supportsRtl="true"
-                android:theme="@style/AppTheme">
-<activity android:name=".MainActivity">
-<intent-filter>
-<action android:name="android.intent.action.MAIN" />
+import androidx.appcompat.app.AppCompatActivity;
 
-<category android:name="android.intent.category.LAUNCHER" />
-</intent-filter>
-</activity>
-</application>
+import android.os.Bundle;
+import android.widget.EditText;
 
-</manifest>
+public class MainActivity extends AppCompatActivity implements RoomListener {
+        private String channelID = "Kg1OF0QfYGklQFqQ";
+        private String roomName = "BridgeApp";
+        private EditText editText;
+        private Scaledrone scaledrome;
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+                super.onCreate(savedInstanceState);
+                setContentView(R.layout.activity_main);
+                editText = (EditText)FindViewById(R.id.editText);
+        }
+
+        @Override
+        public void onOpen(Room room){
+                System.out.println("Connected to room");
+        }
+
+        @Override
+        public void onOpenFailure(Room room, Exception ex){
+                System.err.println(ex);
+        }
+
+        @Override
+        public void onMessage(Room room, com.scaledrone.lib.Message receivedMessage){
+
+        }
+
+}
