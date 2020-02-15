@@ -46,11 +46,6 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
                         editText.getText().clear();
                 }
         }
-
-
-
-
-
 }
 
 // Karen's here
