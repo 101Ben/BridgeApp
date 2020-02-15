@@ -1,7 +1,12 @@
 package com.example.bridge;
+import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,10 +41,10 @@ public class MessageAdapter extends BaseAdapter {
 
     public View getView(int i, View convertView, ViewGroup viewGroup) {
         MessageViewHolder holder = new MessageViewHolder();
-        LayoutInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater messageInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         Message message = messages.get(i);
 
-        if (message.isBelongsToCurrentUser()) {
+        if (message.getBelongToCurrentUser()) {
             convertView = messageInflater.inflate(R.layout.my_message, null);
             holder.messageBody = (TextView) convertView.findViewById(R.id.message_body);
             convertView.setTag(holder);
@@ -51,10 +56,9 @@ public class MessageAdapter extends BaseAdapter {
             holder.messageBody = (TextView) convertView.findViewById(R.id.message_body);
             convertView.setTag(holder);
 
-            holder.name.setText(message.getMemberData().getName());
+            holder.name.setText(message.getUserData().getName());
             holder.messageBody.setText(message.getText());
             GradientDrawable drawable = (GradientDrawable) holder.avatar.getBackground();
-            drawable.setColor(Color.parseColor(message.getMemberData().getColor()));
         }
 
         return convertView;

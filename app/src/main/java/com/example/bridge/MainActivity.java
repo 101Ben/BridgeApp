@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.example.bridge.R;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.scaledrone.lib.Room;
 import com.scaledrone.lib.RoomListener;
 import com.scaledrone.lib.Scaledrone;
