@@ -23,3 +23,5 @@ public class Message extends User {
         return belongToCurrentUser;
     }
 }
+
+//
