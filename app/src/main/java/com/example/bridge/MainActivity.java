@@ -37,7 +37,21 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
 
         @Override
         public void onMessage(Room room, com.scaledrone.lib.Message receivedMessage){
-
+                final ObjectMapper mapper = new ObjectMapper();
+                try {
+                        final User data = mapper.treeToValue(receivedMessage.getMember().getClientData(), User.class);
+                        boolean belongsToCurrentUser = receivedMessage.getClientID().equals(scaledrone.getClientID());
+                        final Message message = new Message(receivedMessage.getData().asText(), data, belongsToCurrentUser);
+                        runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                        messageAdapter.add(message);
+                                        messagesView.setSelection(messagesView.getCount() - 1);
+                                }
+                        });
+                } catch (JsonProcessingException e) {
+                        e.printStackTrace();
+                }
         }
 
         public void sendMessage(View view) {
