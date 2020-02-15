@@ -22,7 +22,6 @@ public class Login extends AppCompatActivity {
     EditText email, password;
     Button btnSignUp;
     Button btnSignIn;
-    TextView tvSignIn;
     TextView tvSignUp;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
