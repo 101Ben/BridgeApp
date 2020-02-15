@@ -87,7 +87,17 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+        tvSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intSignUp = new Intent(Login.this, MainActivity.class);
+                startActivity(intSignUp);
+            }
+        });
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
 }
-
-// CAro is working
