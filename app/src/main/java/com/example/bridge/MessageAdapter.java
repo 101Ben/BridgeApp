@@ -1,5 +1,6 @@
 package com.example.bridge;
 import android.content.Context;
+import android.view.View;
 import android.widget.BaseAdapter;
 
 import java.util.ArrayList;
@@ -38,12 +39,12 @@ public class MessageAdapter extends BaseAdapter {
         LayoutInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         Message message = messages.get(i);
 
-        if (message.isBelongsToCurrentUser()) { // this message was sent by us so let's create a basic chat bubble on the right
+        if (message.isBelongsToCurrentUser()) {
             convertView = messageInflater.inflate(R.layout.my_message, null);
             holder.messageBody = (TextView) convertView.findViewById(R.id.message_body);
             convertView.setTag(holder);
             holder.messageBody.setText(message.getText());
-        } else { // this message was sent by someone else so let's create an advanced chat bubble on the left
+        } else {
             convertView = messageInflater.inflate(R.layout.their_message, null);
             holder.avatar = (View) convertView.findViewById(R.id.avatar);
             holder.name = (TextView) convertView.findViewById(R.id.name);
