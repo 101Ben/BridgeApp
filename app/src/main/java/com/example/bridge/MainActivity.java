@@ -1,4 +1,4 @@
-package com.example.bridgeapp;
+package com.example.bridge;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.EditText;
 
 import com.scaledrone.lib.RoomListener;
+import com.scaledrone.lib.Scaledrone;
 
 public class MainActivity extends AppCompatActivity implements RoomListener {
         private String channelID = "Kg1OF0QfYGklQFqQ";
