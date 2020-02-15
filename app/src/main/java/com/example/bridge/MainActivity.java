@@ -48,5 +48,3 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
                 }
         }
 }
-
-// Karen's here
