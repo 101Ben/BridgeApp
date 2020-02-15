@@ -1,15 +1,19 @@
-package com.example.bridgeapp;
+package com.example.bridge;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 
+import com.example.bridge.R;
+import com.scaledrone.lib.Room;
 import com.scaledrone.lib.RoomListener;
+import com.scaledrone.lib.Scaledrone;
 
 public class MainActivity extends AppCompatActivity implements RoomListener {
         private String channelID = "Kg1OF0QfYGklQFqQ";
-        private String roomName = "BridgeApp";
+        private String roomName = "Bridge";
         private EditText editText;
         private Scaledrone scaledrone;
 
@@ -17,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
-                editText = (EditText)FindViewById(R.id.editText);
+                editText = (EditText)findViewById(R.id.editText);
         }
 
         @Override
@@ -34,6 +38,18 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
         public void onMessage(Room room, com.scaledrone.lib.Message receivedMessage){
 
         }
+
+        public void sendMessage(View view) {
+                String message = editText.getText().toString();
+                if(message.length() > 0) {
+                        scaledrone.publish("Bridge", message);
+                        editText.getText().clear();
+                }
+        }
+
+
+
+
 
 }
 
