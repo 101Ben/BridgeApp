@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 
+import com.scaledrone.lib.RoomListener;
+
 public class MainActivity extends AppCompatActivity implements RoomListener {
         private String channelID = "Kg1OF0QfYGklQFqQ";
         private String roomName = "BridgeApp";
         private EditText editText;
-        private Scaledrone scaledrome;
+        private Scaledrone scaledrone;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
