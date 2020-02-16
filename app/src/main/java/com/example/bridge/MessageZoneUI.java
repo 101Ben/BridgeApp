@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
 
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.database.FirebaseListAdapter;
@@ -17,32 +18,47 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class MessageZoneUI extends AppCompatActivity {
 
+    Button buttonBack;
+
     private FirebaseListAdapter<Message> adapter;
     public static int SIGN_IN_REQUEST_CODE = 10;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_zone_ui);
-        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
-            startActivityForResult(
-                    AuthUI.getInstance()
-                            .createSignInIntentBuilder()
-                            .build(),
-                    SIGN_IN_REQUEST_CODE
-            );
-        } else {
-            // User is already signed in. Therefore, display
-            // a welcome Toast
-            Toast.makeText(this,
-                    "Welcome " + FirebaseAuth.getInstance()
-                            .getCurrentUser()
-                            .getDisplayName(),
-                    Toast.LENGTH_LONG)
-                    .show();
+        buttonBack = findViewById(R.id.backbutton);
+//        if (FirebaseAuth.getInstance().getCurrentUser() == null) {
+//            startActivityForResult(
+//                    AuthUI.getInstance()
+//                            .createSignInIntentBuilder()
+//                            .build(),
+//                    SIGN_IN_REQUEST_CODE
+//            );
+//        } else {
+//            // User is already signed in. Therefore, display
+//            // a welcome Toast
+//            Toast.makeText(this,
+//                    "Welcome " + FirebaseAuth.getInstance()
+//                            .getCurrentUser()
+//                            .getDisplayName(),
+//                    Toast.LENGTH_LONG)
+//                    .show();
+//
+//            // Load chat room contents
+//            displayChatMessages();
+//        }
+//
+//
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent launchAccount = new Intent(getApplicationContext(), HomePageUI.class);
+                startActivity(launchAccount);
+                finish();
+            }
+        });
 
-            // Load chat room contents
-            displayChatMessages();
-        }
     }
 
     private void displayChatMessages() {

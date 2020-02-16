@@ -56,8 +56,8 @@
         android:layout_width="331dp"
         android:layout_height="77dp"
         android:ems="10"
+        android:hint="Enter a Message"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -65,7 +65,8 @@
         android:id="@+id/buttonsend"
         android:layout_width="73dp"
         android:layout_height="84dp"
-        android:text="Button"
+        android:hint="Send"
+        android:text="GO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/list_of_messages" />

@@ -68,7 +68,6 @@
     </ScrollView>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="409dp"
         android:layout_height="72dp"
         android:orientation="horizontal"
@@ -80,7 +79,7 @@
 
         <TextView
             android:id="@+id/messagesPage"
-            android:layout_width="match_parent"
+            android:layout_width="681dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_blue_bright"
@@ -89,5 +88,14 @@
             android:textColor="@android:color/white"
             android:textColorHighlight="@color/design_default_color_primary"
             android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/newMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="New"
+            android:visibility="visible" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,6 +12,7 @@ public class HomePageUI extends AppCompatActivity {
     Button btnAccount;
     Button btnContacts;
     Button btnSettings;
+    Button btnNewMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class HomePageUI extends AppCompatActivity {
         btnAccount = findViewById(R.id.accountButton);
         btnContacts = findViewById(R.id.contactsButton);
         btnSettings = findViewById(R.id.settingsButton);
+        btnNewMessage = findViewById(R.id.newMessage);
 
         btnAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +47,16 @@ public class HomePageUI extends AppCompatActivity {
             public void onClick(View v)
             {
                 Intent launchAccount = new Intent(getApplicationContext(), SettingsPageUI.class);
+                startActivity(launchAccount);
+                finish();
+            }
+        });
+
+        btnNewMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent launchAccount = new Intent(getApplicationContext(), MessageZoneUI.class);
                 startActivity(launchAccount);
                 finish();
             }

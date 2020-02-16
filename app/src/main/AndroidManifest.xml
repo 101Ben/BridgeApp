@@ -19,6 +19,8 @@
         <activity android:name=".AccountPageUI" />
         <activity android:name=".AddContactsUI" />
         <activity android:name=".SettingsPageUI" />
+        <activity android:name=".MessageZoneUI" />
+        <activity android:name=".Message" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
