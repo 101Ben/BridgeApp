@@ -7,25 +7,25 @@ import android.widget.Button;
 
 import android.os.Bundle;
 
-public class ContactPageUI extends AppCompatActivity {
+public class SettingsPageUI extends AppCompatActivity {
 
     Button btnAccount;
-    Button btnSettings;
+    Button btnContacts;
     Button btnMessages;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_page_ui);
+        setContentView(R.layout.activity_settings_page_ui);
 
         btnAccount = findViewById(R.id.accountButton);
-        btnSettings = findViewById(R.id.contactsButton);
+        btnContacts = findViewById(R.id.contactsButton);
         btnMessages = findViewById(R.id.messagesButton);
 
-        btnSettings.setOnClickListener(new View.OnClickListener() {
+        btnContacts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent launchLogOut = new Intent(getApplicationContext(), SettingsPageUI.class);
+                Intent launchLogOut = new Intent(getApplicationContext(), ContactPageUI.class);
                 startActivity(launchLogOut);
                 finish();
             }
@@ -42,7 +42,7 @@ public class ContactPageUI extends AppCompatActivity {
 
         btnAccount.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 Intent launchLogOut = new Intent(getApplicationContext(), AccountPageUI.class);
                 startActivity(launchLogOut);
                 finish();
