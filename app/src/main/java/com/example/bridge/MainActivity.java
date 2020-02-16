@@ -1,7 +1,6 @@
 package com.example.bridge;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -23,7 +22,8 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
-                editText = (EditText)findViewById(R.id.editText);
+                //editText = (EditText)findViewById(R.id.editText);
+
         }
 
         @Override
