@@ -101,12 +101,11 @@
             android:text="Log Out"
             android:textColor="@android:color/white" />
 
-<!--        <ImageButton-->
-<!--            android:id="@+id/imageButton"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            tools:srcCompat="@tools:sample/avatars"-->
-<!--            android:background="white"/>-->
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/fullName"
