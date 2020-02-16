@@ -21,34 +21,42 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Account" />
+            android:background="@android:color/holo_blue_bright"
+            android:text="Account"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/contacts"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="contacts" />
+            android:background="@android:color/holo_blue_bright"
+            android:text="contacts"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/messages"
             android:layout_width="wrap_content"
             android:layout_height="79dp"
             android:layout_weight="1"
-            android:text="messages" />
+            android:background="@android:color/holo_blue_bright"
+            android:text="messages"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/settings"
             android:layout_width="98dp"
             android:layout_height="79dp"
             android:layout_weight="1"
-            android:text="settings" />
+            android:background="@android:color/holo_blue_bright"
+            android:text="settings"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="409dp"
-        android:layout_height="564dp"
+        android:layout_height="580dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -71,7 +79,9 @@
             android:layout_width="107dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Option" />
+            android:text="Option"
+            android:background="@android:color/holo_blue_bright"
+            android:textColor="@android:color/white"/>
 
         <TextView
             android:id="@+id/contactPage"
@@ -80,14 +90,18 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="Contacts"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:background="@android:color/holo_blue_bright"
+            android:textColor="@android:color/white"/>
 
         <Button
             android:id="@+id/addContact"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Add (+)" />
+            android:text="Add (+)"
+            android:background="@android:color/holo_blue_bright"
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 
 
