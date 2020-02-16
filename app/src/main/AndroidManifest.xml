@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.bridge">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,13 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ContactPageUI"></activity>
-        <activity android:name=".HomePageUI"></activity>
-        <activity android:name=".Login"></activity>
-        <activity android:name=".Register"></activity>
-        <activity android:name=".AccountPageUI"></activity>
-        <activity android:name=".AddContactsUI"></activity>
-        <activity android:name=".SettingsPageUI"></activity>
+        <activity android:name=".WelcomingPageUI"></activity>
+        <activity android:name=".ContactPageUI" />
+        <activity android:name=".HomePageUI" />
+        <activity android:name=".Login" />
+        <activity android:name=".Register" />
+        <activity android:name=".AccountPageUI" />
+        <activity android:name=".AddContactsUI" />
+        <activity android:name=".SettingsPageUI" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
