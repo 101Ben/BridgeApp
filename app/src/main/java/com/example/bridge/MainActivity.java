@@ -2,8 +2,10 @@ package com.example.bridge;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -12,18 +14,39 @@ import com.scaledrone.lib.Room;
 import com.scaledrone.lib.RoomListener;
 import com.scaledrone.lib.Scaledrone;
 
-public class MainActivity extends AppCompatActivity implements RoomListener {
+public class MainActivity extends AppCompatActivity {
 
         private String channelID = "Kg1OF0QfYGklQFqQ";
         private String roomName = "Bridge";
         private EditText editText;
         private Scaledrone scaledrone;
+        Button btnLogIn;
+        Button btnSignUp;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
-                editText = (EditText)findViewById(R.id.editText);
+                btnLogIn = findViewById(R.id.buttonLogin);
+                btnSignUp = findViewById(R.id.buttonSignUp);
+
+                btnLogIn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                                Intent launchLogin = new Intent(getApplicationContext(), Login.class);
+                                startActivity(launchLogin);
+                                finish();
+                        }
+                });
+
+                btnSignUp.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v) {
+                                Intent launchSignup = new Intent(getApplicationContext(), Register.class);
+                                startActivity(launchSignup);
+                                finish();
+                        }
+                });
         }
 
         @Override
@@ -62,4 +85,6 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
                         editText.getText().clear();
                 }
         }
+
+
 }
