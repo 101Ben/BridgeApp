@@ -1,4 +1,4 @@
-/*package com.example.bridge;
+package com.example.bridge;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
@@ -69,5 +69,5 @@ class MessageViewHolder {
     public View avatar;
     public TextView name;
     public TextView messageBody;
-}*/
+}
 
