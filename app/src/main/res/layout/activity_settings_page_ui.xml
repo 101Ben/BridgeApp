@@ -104,24 +104,6 @@
             android:layout_height="match_parent" />
 
         <Button
-            android:id="@+id/addFriends"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:text="Add Friends"
-            android:textColor="@android:color/holo_blue_dark" />
-
-        <Button
-            android:id="@+id/invitations"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/white"
-            android:text="Invitations"
-            android:textColor="@android:color/holo_blue_dark" />
-
-        <Button
             android:id="@+id/languages"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
