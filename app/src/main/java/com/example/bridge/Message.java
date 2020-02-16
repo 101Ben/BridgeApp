@@ -1,4 +1,4 @@
-/*
+
 package com.example.bridge;
 
 public class Message extends User {
@@ -25,4 +25,3 @@ public class Message extends User {
     }
 }
 
-*/

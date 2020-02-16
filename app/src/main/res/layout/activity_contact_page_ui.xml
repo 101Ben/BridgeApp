@@ -55,7 +55,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-        android:layout_width="417dp"
+        android:layout_width="0dp"
         android:layout_height="74dp"
         android:layout_marginBottom="60dp"
         android:orientation="horizontal"
@@ -67,25 +67,27 @@
         app:layout_constraintVertical_bias="0.0">
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="58dp"
+            android:id="@+id/otherOption"
+            android:layout_width="107dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="Option" />
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/contactPage"
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:gravity="center"
+            android:text="Contacts"
+            android:textSize="30sp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/addContact"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Button" />
+            android:text="Add (+)" />
     </LinearLayout>
 
 
