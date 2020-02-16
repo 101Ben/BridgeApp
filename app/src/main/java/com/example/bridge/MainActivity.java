@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                 });
         }
-/*
 
         @Override
         public void onOpen(Room room){
@@ -85,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                         scaledrone.publish("Bridge", message);
                         editText.getText().clear();
                 }
-        }*/
+        }
 
 
 }
