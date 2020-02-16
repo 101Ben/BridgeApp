@@ -104,7 +104,7 @@
             android:layout_height="match_parent" />
 
         <Button
-            android:id="@+id/languages"
+            android:id="@+id/languagesButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
