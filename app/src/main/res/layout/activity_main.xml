@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="415dp"
+        android:layout_height="851dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:color/holo_blue_bright"
+        tools:layout_editor_absoluteY="-3dp" />
+
     <TextView
         android:id="@+id/textViewBridge"
         android:layout_width="wrap_content"
@@ -37,10 +47,11 @@
         android:id="@+id/buttonSignup"
         android:layout_width="169dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="32dp"
         android:text="Sign Up"
         app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent" />
 
 

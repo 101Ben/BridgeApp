@@ -42,23 +42,27 @@ public class Register extends AppCompatActivity {
                 if (emailId.isEmpty()) {
                     email.setError("Please enter a valid email address");
                     email.requestFocus();
-                } else if (pwd.isEmpty()) {
+                }
+                else if (pwd.isEmpty() || pwd.length() < 6) {
                     password.setError("Please enter a valid password");
                     password.requestFocus();
-                } else if (emailId.isEmpty() && pwd.isEmpty()) {
+                }
+                else if (emailId.isEmpty() && pwd.isEmpty()) {
                     Toast.makeText(Register.this, "Fields are empty!", Toast.LENGTH_SHORT).show();
-                } else if (!(emailId.isEmpty() && pwd.isEmpty())) {
+                }
+                else if (!(emailId.isEmpty() && pwd.isEmpty())) {
                     mFirebaseAuth.createUserWithEmailAndPassword(emailId, pwd).addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
                                 Toast.makeText(Register.this, "Can't sign up. Try again.", Toast.LENGTH_SHORT).show();
                             } else {
-                                startActivity(new Intent(Register.this, MainActivity.class));
+                                startActivity(new Intent(Register.this, HomePageUI.class));
                             }
                         }
                     });
-                } else {
+                }
+                else {
                     Toast.makeText(Register.this, "Error", Toast.LENGTH_SHORT).show();
                 }
             }

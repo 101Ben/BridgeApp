@@ -10,16 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ContactPageUI"></activity>
-        <activity android:name=".HomePageUI" />
+        <activity android:name=".HomePageUI"></activity>
         <activity android:name=".Login"></activity>
         <activity android:name=".Register"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

@@ -20,20 +20,20 @@ public class MainActivity extends AppCompatActivity {
         private String roomName = "Bridge";
         private EditText editText;
         private Scaledrone scaledrone;*/
-        Button btnLogin;
-        Button btnSignup;
+        private Button btnLogin;
+        private Button btnSignup;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
-                btnLogin = findViewById(R.id.buttonLogin);
-                btnSignup = findViewById(R.id.buttonSignup);
+                btnLogin = (Button) findViewById(R.id.buttonLogin);
+                btnSignup = (Button) findViewById(R.id.buttonSignup);
 
                 btnLogin.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                                Intent launchLogin = new Intent(getApplicationContext(), Login.class);
+                                Intent launchLogin = new Intent(MainActivity.this, Login.class);
                                 startActivity(launchLogin);
                                 finish();
                         }
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 btnSignup.setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View v) {
-                                Intent launchSignup = new Intent(getApplicationContext(), Register.class);
+                                Intent launchSignup = new Intent(MainActivity.this, Register.class);
                                 startActivity(launchSignup);
                                 finish();
                         }
