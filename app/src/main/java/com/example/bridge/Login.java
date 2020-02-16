@@ -44,7 +44,7 @@ public class Login extends AppCompatActivity {
                 FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
                 if (mFirebaseUser != null) {
                     Toast.makeText(Login.this, "You are logged in.", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(Login.this, MainActivity.class);
+                    Intent i = new Intent(Login.this, HomePageUI.class);
                     startActivity(i);
                 }
                 else {
@@ -52,6 +52,7 @@ public class Login extends AppCompatActivity {
                 }
             }
         };
+
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,7 +77,7 @@ public class Login extends AppCompatActivity {
                                 Toast.makeText(Login.this, "Login Error. Please try again.", Toast.LENGTH_SHORT).show();
                             }
                             else {
-                                Intent intToHome = new Intent(Login.this, MainActivity.class);
+                                Intent intToHome = new Intent(Login.this, HomePageUI.class);
                                 startActivity(intToHome);
                             }
                         }
