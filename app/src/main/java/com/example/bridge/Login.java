@@ -20,7 +20,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity {
     EditText email, password;
-    Button btnSignUp;
     Button btnSignIn;
     TextView tvSignIn;
     TextView tvSignUp;

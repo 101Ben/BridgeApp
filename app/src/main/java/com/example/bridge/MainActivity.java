@@ -1,8 +1,11 @@
 package com.example.bridge;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -11,20 +14,39 @@ import com.scaledrone.lib.Room;
 import com.scaledrone.lib.RoomListener;
 import com.scaledrone.lib.Scaledrone;
 
-public class MainActivity extends AppCompatActivity implements RoomListener {
+public class MainActivity extends AppCompatActivity {
 
-        private String channelID = "Kg1OF0QfYGklQFqQ";
+/*        private String channelID = "Kg1OF0QfYGklQFqQ";
         private String roomName = "Bridge";
         private EditText editText;
-        private Scaledrone scaledrone;
+        private Scaledrone scaledrone;*/
+        Button btnLogin;
+        Button btnSignup;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
-                //editText = (EditText)findViewById(R.id.editText);
+                btnLogin = findViewById(R.id.buttonLogin);
+                btnSignup = findViewById(R.id.buttonSignup);
 
+                btnLogin.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                                Intent launchLogin = new Intent(MainActivity.this, Login.class);
+                                startActivity(launchLogin);
+                        }
+                });
+
+                btnSignup.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v) {
+                                Intent launchSignup = new Intent(MainActivity.this, Register.class);
+                                startActivity(launchSignup);
+                        }
+                });
         }
+/*
 
         @Override
         public void onOpen(Room room){
@@ -61,5 +83,7 @@ public class MainActivity extends AppCompatActivity implements RoomListener {
                         scaledrone.publish("Bridge", message);
                         editText.getText().clear();
                 }
-        }
+        }*/
+
+
 }
