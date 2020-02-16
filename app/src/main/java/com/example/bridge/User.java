@@ -3,11 +3,13 @@ package com.example.bridge;
 public class User {
     private String email;
     private String password;
+    private String fullName;
     //private String language;
-    public User(String email, String password)
+    public User(String email, String password, String fullName)
     {
         this.email = email;
         this.password = password;
+        this.fullName = fullName;
     }
 
     public User() {
@@ -17,6 +19,7 @@ public class User {
     {
         return email;
     }
+    public String getFullName() {return fullName;}
     public void setEmail(String email)
     {
         this.email = email;
