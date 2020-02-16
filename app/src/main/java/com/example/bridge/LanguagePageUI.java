@@ -48,6 +48,6 @@ public class LanguagePageUI extends AppCompatActivity implements AdapterView.OnI
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
-
+        //hell yeahhh
     }
 }
