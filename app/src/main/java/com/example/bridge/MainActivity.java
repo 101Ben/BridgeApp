@@ -11,8 +11,8 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity{
         //implements RoomListener {
 
-        private String channelID = "Kg1OF0QfYGklQFqQ";
-        private String roomName = "Bridge";
+//        private String channelID = "Kg1OF0QfYGklQFqQ";
+//        private String roomName = "Bridge";
         private EditText editText;
         Button btnLogIn;
         Button btnSignUp;
