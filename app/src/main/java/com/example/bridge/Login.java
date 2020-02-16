@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Login extends AppCompatActivity {
     EditText email, password;
     Button btnSignIn;
+    TextView tvSignIn;
     TextView tvSignUp;
     FirebaseAuth mFirebaseAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
@@ -43,18 +44,21 @@ public class Login extends AppCompatActivity {
                 FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
                 if (mFirebaseUser != null) {
                     Toast.makeText(Login.this, "You are logged in.", Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(Login.this, HomePageUI.class);
+                    Intent i = new Intent(Login.this, MainActivity.class);
                     startActivity(i);
-                    finish();
+                }
+                else {
+                    Toast.makeText(Login.this, "You are logged in", Toast.LENGTH_SHORT).show();
                 }
             }
         };
+
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                String emailId = email.getText().toString().trim();
-                String pwd = password.getText().toString().trim();
+                String emailId = email.getText().toString();
+                String pwd = password.getText().toString();
                 if (emailId.isEmpty()) {
                     email.setError("Please enter a valid email address");
                     email.requestFocus();
@@ -72,7 +76,7 @@ public class Login extends AppCompatActivity {
                                 Toast.makeText(Login.this, "Login Error. Please try again.", Toast.LENGTH_SHORT).show();
                             }
                             else {
-                                Intent intToHome = new Intent(Login.this, HomePageUI.class);
+                                Intent intToHome = new Intent(Login.this, MainActivity.class);
                                 startActivity(intToHome);
                             }
                         }
@@ -83,17 +87,5 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
-        tvSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intSignUp = new Intent(Login.this, Register.class);
-                startActivity(intSignUp);
-            }
-        });
-    }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
 }
