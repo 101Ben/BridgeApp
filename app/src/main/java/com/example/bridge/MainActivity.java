@@ -16,10 +16,10 @@ import com.scaledrone.lib.Scaledrone;
 
 public class MainActivity extends AppCompatActivity {
 
-/*      private String channelID = "Kg1OF0QfYGklQFqQ";
+        private String channelID = "Kg1OF0QfYGklQFqQ";
         private String roomName = "Bridge";
         private EditText editText;
-        private Scaledrone scaledrone;*/
+        private Scaledrone scaledrone;
         Button btnLogIn;
         Button btnSignUp;
 
