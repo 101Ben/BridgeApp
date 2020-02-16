@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ContactPageUI"></activity>
-        <activity android:name=".HomePageUI" />
+        <activity android:name=".HomePageUI"></activity>
+        <activity android:name=".AcountPageUI"></activity>
         <activity android:name=".Login"></activity>
         <activity android:name=".Register"></activity>
 
