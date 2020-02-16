@@ -1,14 +1,14 @@
-package com.example.bridge;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
-public class MessageZoneUI extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_message_zone_ui);
-    }
-}
+//package com.example.bridge;
+//
+//import androidx.appcompat.app.AppCompatActivity;
+//
+//import android.os.Bundle;
+//
+//public class MessageZoneUI extends AppCompatActivity {
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_message_zone_ui);
+//    }
+//}

@@ -18,13 +18,15 @@
 
     <TextView
         android:id="@+id/name"
-        android:layout_marginLeft="15dp"
-        android:layout_toRightOf="@+id/avatar"
-        android:layout_alignTop="@+id/avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/avatar"
+        android:layout_alignLeft="@+id/avatar"
+        android:layout_alignTop="@+id/avatar"
+        android:layout_marginStart="49dp"
+        android:layout_marginLeft="49dp"
         android:paddingBottom="4dp"
-        android:text="Rose"/>
+        android:text="Rose" />
 
     <TextView
         android:layout_width="wrap_content"
