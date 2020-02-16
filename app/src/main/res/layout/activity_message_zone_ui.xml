@@ -30,6 +30,35 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Send" />
+            android:text="Send"
+            android:textSize="10sp" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="405dp"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/backbutton"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="back"
+            android:textSize="6sp" />
+
+        <TextView
+            android:id="@+id/contactName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/ChatCorresponding" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
