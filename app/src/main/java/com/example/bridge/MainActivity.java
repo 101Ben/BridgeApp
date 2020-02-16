@@ -33,16 +33,18 @@ public class MainActivity extends AppCompatActivity {
                 btnLogin.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                                Intent launchLogin = new Intent(MainActivity.this, Login.class);
+                                Intent launchLogin = new Intent(getApplicationContext(), Login.class);
                                 startActivity(launchLogin);
+                                finish();
                         }
                 });
 
                 btnSignup.setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View v) {
-                                Intent launchSignup = new Intent(MainActivity.this, Register.class);
+                                Intent launchSignup = new Intent(getApplicationContext(), Register.class);
                                 startActivity(launchSignup);
+                                finish();
                         }
                 });
         }
