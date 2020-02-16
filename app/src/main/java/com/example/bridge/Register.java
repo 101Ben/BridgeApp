@@ -26,6 +26,7 @@ public class Register extends AppCompatActivity {
     Button btnSignUp;
     TextView tvSignIn;
     FirebaseAuth mFirebaseAuth;
+    static Map newPost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,10 +69,12 @@ public class Register extends AppCompatActivity {
                                 String userID = mFirebaseAuth.getCurrentUser().getUid();
                                 DatabaseReference currentUser = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
                                 String full = fullname.getText().toString().trim();
-                                Map newPost  =  new HashMap();
+                                newPost  =  new HashMap();
                                 newPost.put("name", full);
                                 currentUser.setValue(newPost);
-                                startActivity(new Intent(Register.this, HomePageUI.class));
+
+                                //changed from HomePageUI to WelcomingPageUI
+                                startActivity(new Intent(Register.this, WelcomingPageUI.class));
                             }
                         }
                     });

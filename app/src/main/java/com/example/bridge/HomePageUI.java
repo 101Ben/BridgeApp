@@ -16,7 +16,7 @@ public class HomePageUI extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page_ui);
+        setContentView(R.layout.activity_home_ui);
 
         btnAccount = findViewById(R.id.accountButton);
         btnContacts = findViewById(R.id.contactsButton);

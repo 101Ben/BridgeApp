@@ -22,7 +22,7 @@ public class SettingsPageUI extends AppCompatActivity {
         btnAccount = findViewById(R.id.accountButton);
         btnContacts = findViewById(R.id.contactsButton);
         btnMessages = findViewById(R.id.messagesButton);
-        btnLanguages = findViewById(R.id.languagesButton);
+        //btnLanguages = findViewById(R.id.languagesButton);
 
         btnContacts.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,13 +51,13 @@ public class SettingsPageUI extends AppCompatActivity {
             }
         });
 
-        btnLanguages.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent launchLogOut = new Intent(getApplicationContext(), LanguagePageUI.class);
-                startActivity(launchLogOut);
-                finish();
-            }
-        });
+//        btnLanguages.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v){
+//                Intent launchLogOut = new Intent(getApplicationContext(), LanguagePageUI.class);
+//                startActivity(launchLogOut);
+//                finish();
+//            }
+//        });
     }
 }
