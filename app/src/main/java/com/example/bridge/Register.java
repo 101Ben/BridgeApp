@@ -2,7 +2,6 @@ package com.example.bridge;
 
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,32 +12,42 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import static android.os.Build.VERSION_CODES.O;
-
 public class Register extends AppCompatActivity {
-    EditText email, password;
+    EditText email, password, fullname;
+    String userID;
     Button btnSignUp;
     TextView tvSignIn;
     FirebaseAuth mFirebaseAuth;
+    FirebaseDatabase fStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
         mFirebaseAuth = FirebaseAuth.getInstance();
+        fullname = findViewById(R.id.editTextFullName);
         email = findViewById(R.id.editTextEmail);
         password = findViewById(R.id.editTextPassword);
         btnSignUp = findViewById(R.id.buttonRegister);
         tvSignIn = findViewById(R.id.textViewSignin);
+
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String emailId = email.getText().toString();
-                String pwd = password.getText().toString();
+                String full = fullname.getText().toString().trim();
+                String emailId = email.getText().toString().trim();
+                String pwd = password.getText().toString().trim();
+
                 if (emailId.isEmpty()) {
                     email.setError("Please enter a valid email address");
                     email.requestFocus();
@@ -56,7 +65,12 @@ public class Register extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
                                 Toast.makeText(Register.this, "Can't sign up. Try again.", Toast.LENGTH_SHORT).show();
-                            } else {
+                            }
+                            else {
+                                Toast.makeText(Register.this, "Sign up successful.", Toast.LENGTH_SHORT).show();
+                                userID = mFirebaseAuth.getCurrentUser().getUid();
+                                // DatabaseReference documentReference = fStore.getReference("users").getRef(userID);
+                                Map<String, Object> user =  new HashMap<>();
                                 startActivity(new Intent(Register.this, HomePageUI.class));
                             }
                         }
