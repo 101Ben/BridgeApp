@@ -23,11 +23,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Register extends AppCompatActivity {
     EditText email, password, fullname;
-    String userID;
     Button btnSignUp;
     TextView tvSignIn;
     FirebaseAuth mFirebaseAuth;
-    FirebaseDatabase fStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +42,6 @@ public class Register extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String full = fullname.getText().toString().trim();
                 String emailId = email.getText().toString().trim();
                 String pwd = password.getText().toString().trim();
 
@@ -68,9 +65,12 @@ public class Register extends AppCompatActivity {
                             }
                             else {
                                 Toast.makeText(Register.this, "Sign up successful.", Toast.LENGTH_SHORT).show();
-                                userID = mFirebaseAuth.getCurrentUser().getUid();
-                                // DatabaseReference documentReference = fStore.getReference("users").getRef(userID);
-                                Map<String, Object> user =  new HashMap<>();
+                                String userID = mFirebaseAuth.getCurrentUser().getUid();
+                                DatabaseReference currentUser = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
+                                String full = fullname.getText().toString().trim();
+                                Map newPost  =  new HashMap();
+                                newPost.put("full name", full);
+                                currentUser.setValue(newPost);
                                 startActivity(new Intent(Register.this, HomePageUI.class));
                             }
                         }
