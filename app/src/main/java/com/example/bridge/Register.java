@@ -71,7 +71,9 @@ public class Register extends AppCompatActivity {
                                 Map newPost  =  new HashMap();
                                 newPost.put("name", full);
                                 currentUser.setValue(newPost);
-                                startActivity(new Intent(Register.this, HomePageUI.class));
+
+                                //changed from HomePageUI to WelcomingPageUI
+                                startActivity(new Intent(Register.this, WelcomingPageUI.class));
                             }
                         }
                     });
