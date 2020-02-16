@@ -8,19 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.scaledrone.lib.Room;
-import com.scaledrone.lib.RoomListener;
-import com.scaledrone.lib.Scaledrone;
-
 public class MainActivity extends AppCompatActivity{
         //implements RoomListener {
 
         private String channelID = "Kg1OF0QfYGklQFqQ";
         private String roomName = "Bridge";
         private EditText editText;
-        private Scaledrone scaledrone;
         Button btnLogIn;
         Button btnSignUp;
 
