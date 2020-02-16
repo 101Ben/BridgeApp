@@ -57,6 +57,7 @@
         android:id="@+id/scrollView3"
         android:layout_width="409dp"
         android:layout_height="580dp"
+        android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -75,7 +76,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <Button
-            android:id="@+id/otherOption"
+            android:id="@+id/otherOptionButton"
             android:layout_width="107dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -84,18 +85,18 @@
             android:textColor="@android:color/white"/>
 
         <TextView
-            android:id="@+id/contactPage"
+            android:id="@+id/contactPageTextView"
             android:layout_width="270dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@android:color/holo_blue_bright"
             android:gravity="center"
             android:text="Contacts"
-            android:textSize="30sp"
-            android:background="@android:color/holo_blue_bright"
-            android:textColor="@android:color/white"/>
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
 
         <Button
-            android:id="@+id/addContact"
+            android:id="@+id/addContactButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"

@@ -15,16 +15,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent">
 
-        <EditText
-            android:id="@+id/typingZone"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:ems="10"
-            android:hint="Enter text"
-            android:inputType="textPersonName"
-            android:text="Enter text" />
-
         <Button
             android:id="@+id/sendMessage"
             android:layout_width="wrap_content"
@@ -32,7 +22,21 @@
             android:layout_weight="1"
             android:text="Send"
             android:textSize="10sp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="Write a message"
+            android:inputType="text"
+            android:paddingHorizontal="10dp"
+            android:text="" />
+
     </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="405dp"

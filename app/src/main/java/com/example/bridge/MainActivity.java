@@ -14,7 +14,8 @@ import com.scaledrone.lib.Room;
 import com.scaledrone.lib.RoomListener;
 import com.scaledrone.lib.Scaledrone;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
+        //implements RoomListener {
 
         private String channelID = "Kg1OF0QfYGklQFqQ";
         private String roomName = "Bridge";
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
+                editText = (EditText)findViewById(R.id.editText);
                 btnLogIn = findViewById(R.id.buttonLogin);
                 btnSignUp = findViewById(R.id.buttonSignup);
 
@@ -49,9 +51,11 @@ public class MainActivity extends AppCompatActivity {
                 });
         }
 
+
 //        @Override
 //        public void onOpen(Room room){
 //                System.out.println("Connected to room.");
+////                scaledrone.subscribe(roomName,MainActivity.this);
 //        }
 //
 //        @Override
@@ -69,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
 //                        runOnUiThread(new Runnable() {
 //                                @Override
 //                                public void run() {
-//                                        messageAdapter.add(message);
+//                                        MessageAdapter.add(message);
 //                                        messagesView.setSelection(messagesView.getCount() - 1);
 //                                }
 //                        });
@@ -85,6 +89,6 @@ public class MainActivity extends AppCompatActivity {
 //                        editText.getText().clear();
 //                }
 //        }
-//
+
 
 }
