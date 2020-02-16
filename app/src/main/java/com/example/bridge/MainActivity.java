@@ -16,21 +16,21 @@ import com.scaledrone.lib.Scaledrone;
 
 public class MainActivity extends AppCompatActivity {
 
-/*        private String channelID = "Kg1OF0QfYGklQFqQ";
+/*      private String channelID = "Kg1OF0QfYGklQFqQ";
         private String roomName = "Bridge";
         private EditText editText;
         private Scaledrone scaledrone;*/
-        Button btnLogin;
-        Button btnSignup;
+        Button btnLogIn;
+        Button btnSignUp;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
-                btnLogin = findViewById(R.id.buttonLogin);
-                btnSignup = findViewById(R.id.buttonSignup);
+                btnLogIn = findViewById(R.id.buttonLogin);
+                btnSignUp = findViewById(R.id.buttonSignUp);
 
-                btnLogin.setOnClickListener(new View.OnClickListener() {
+                btnLogIn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                                 Intent launchLogin = new Intent(MainActivity.this, Login.class);
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                 });
 
-                btnSignup.setOnClickListener(new View.OnClickListener(){
+                btnSignUp.setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View v) {
                                 Intent launchSignup = new Intent(MainActivity.this, Register.class);
