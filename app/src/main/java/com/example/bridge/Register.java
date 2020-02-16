@@ -69,7 +69,7 @@ public class Register extends AppCompatActivity {
                                 DatabaseReference currentUser = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
                                 String full = fullname.getText().toString().trim();
                                 Map newPost  =  new HashMap();
-                                newPost.put("full name", full);
+                                newPost.put("name", full);
                                 currentUser.setValue(newPost);
                                 startActivity(new Intent(Register.this, HomePageUI.class));
                             }
