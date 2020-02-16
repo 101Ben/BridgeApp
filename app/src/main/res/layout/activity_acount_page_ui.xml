@@ -20,8 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Account"
             android:background="@android:color/holo_blue_bright"
+            android:text="Account"
             android:textColor="@android:color/white" />
 
         <Button
@@ -29,8 +29,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="contacts"
             android:background="@android:color/holo_blue_bright"
+            android:text="contacts"
             android:textColor="@android:color/white" />
 
         <Button
@@ -38,21 +38,22 @@
             android:layout_width="wrap_content"
             android:layout_height="79dp"
             android:layout_weight="1"
-            android:text="messages"
             android:background="@android:color/holo_blue_bright"
-            android:textColor="@android:color/white"/>
+            android:text="messages"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/settings"
             android:layout_width="98dp"
             android:layout_height="79dp"
             android:layout_weight="1"
-            android:text="settings"
             android:background="@android:color/holo_blue_bright"
-            android:textColor="@android:color/white"/>
+            android:text="settings"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="409dp"
         android:layout_height="72dp"
         android:orientation="horizontal"
@@ -67,9 +68,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@android:color/holo_blue_bright"
             android:gravity="center"
             android:text="Profile"
-            android:background="@android:color/holo_blue_bright"
             android:textColor="@android:color/white"
             android:textColorHighlight="@color/design_default_color_primary"
             android:textSize="30sp" />
@@ -78,17 +79,27 @@
     <LinearLayout
         android:layout_width="409dp"
         android:layout_height="579dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="73dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/logOut"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Log Out"
             android:background="@android:color/holo_green_light"
-            android:textColor="@android:color/white"/>
+            android:text="Log Out"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
